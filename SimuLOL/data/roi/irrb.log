@@ -1,0 +1,109 @@
+irrb log 0.6
+
+[general info]
+               OS: Linux 2.6.35-24-generic #42-Ubuntu SMP Thu Dec 2 02:41:37 UTC 2010
+  Blender Version: 2.56.0
+      .blend File: /home/tomk/Space/Blender/roi.blend
+      .blend Root: /home/tomk/Space/Blender
+     .irrb Config: /home/tomk/.irrb
+   Python Version: 3.1.2 final
+
+[options]
+     Create Scene: True
+   Base Directory: /home/tomk/Code/testIrrlicht/roi/
+  Scene Directory: /home/tomk/Code/testIrrlicht/roi/
+   Mesh Directory: /home/tomk/Code/testIrrlicht/roi/mdl/
+  Image Directory: /home/tomk/Code/testIrrlicht/roi/tex/
+    mdl Directory: mdl
+    tex Directory: tex
+           Binary: False
+   Export Cameras: True
+    Export Lights: True
+   Export Physics: False
+      Export Pack: False
+Export Executable: False
+      Copy Images: True
+     Run WalkTest: True
+  Image Extension: Original
+    Selected Only: False
+     Irrlicht Ver: 1.7
+    iwalktest Env: /home/tomk/Prog/tubras-read-only/bin/iwalktest -i "$1" -a "$2"
+     imeshcvt Env: /home/tomk/Prog/tubras-read-only/bin/imeshcvt
+    iwalktest Cmd: /home/tomk/Prog/tubras-read-only/bin/iwalktest -i "/home/tomk/Code/testIrrlicht/roi/Scene.irr" -a "/home/tomk/Code/testIrrlicht/roi/"
+
+[scene info]
+Scene Name: Scene
+Visible Layers: [0]
+Horizon Color: Color((0.05087608844041824, 0.05087608844041824, 0.05087608844041824))
+
+[animation info]
+fpsbase: 1.0000
+    fps: 24
+ sFrame: 1
+ eFrame: 250
+
+[object info]
+Object (0): Name=roi, Type=MESH, Export=True, Layers=[0], NodeAnim=False, Constraints=False
+Object (1): Name=Lamp, Type=LAMP, Export=True, Layers=[0], NodeAnim=False, Constraints=False
+Object (2): Name=Camera, Type=CAMERA, Export=True, Layers=[0], NodeAnim=False, Constraints=False
+
+[Mesh - ob:roi, me:roi]
+Parent: None
+Rotation Mode: XYZ
+Rotation Euler: Euler((0.0, 0.0, 0.0))
+Hide: False
+Hide Render: False
+UV Layers (2): , UVTex.000, UVTex
+Primary UV Layer: None
+Double Sided: True
+Mesh VertexColors: False
+Modifiers: None
+Armatures: None
+physics_type: STATIC
+collision_bounds: BOX
+mass: 1.00
+radius: 1.00
+
+[Image]
+imageName: roi-lightmap
+org fullFileName: //roi-lightmap.png
+fullFileName: /home/tomk/Space/Blender/roi-lightmap.png
+dirname: /home/tomk/Space/Blender
+fileName: roi-lightmap
+fileExt: .png
+bImage.file_format: PNG
+bImage.depth: 32
+bImage.source: FILE
+bImage.packed_file: None
+bImage.library: None
+exists on disk: True
+result0: tex/roi-lightmap.png
+result1: /home/tomk/Code/testIrrlicht/roi/tex/roi-lightmap.png
+
+[Image]
+imageName: texpion.png
+org fullFileName: //texpion.png
+fullFileName: /home/tomk/Space/Blender/texpion.png
+dirname: /home/tomk/Space/Blender
+fileName: texpion
+fileExt: .png
+bImage.file_format: PNG
+bImage.depth: 24
+bImage.source: FILE
+bImage.packed_file: None
+bImage.library: None
+exists on disk: True
+result0: tex/texpion.png
+result1: /home/tomk/Code/testIrrlicht/roi/tex/texpion.png
+
+[Buffers]
+Count: 1
+   Material.001:roi-lightmap:texpion.png : DefaultMaterial
+
+[stats]
+Export Complete - 0.14 seconds - 14:49:14 01/29/11
+1 Object(s)
+1 Mesh
+1 Light(s)
+2 Image(s)
+2448/1192 Verts/Tris

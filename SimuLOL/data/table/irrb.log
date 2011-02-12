@@ -1,0 +1,397 @@
+irrb log 0.6
+
+[general info]
+               OS: Linux 2.6.35-25-generic #44-Ubuntu SMP Fri Jan 21 17:40:44 UTC 2011
+  Blender Version: 2.56.0
+      .blend File: /home/tomk/table3.blend
+      .blend Root: /home/tomk
+     .irrb Config: /home/tomk/.irrb
+   Python Version: 3.1.2 final
+
+[options]
+     Create Scene: True
+   Base Directory: /home/tomk/Code/testIrrlicht2/table/
+  Scene Directory: /home/tomk/Code/testIrrlicht2/table/
+   Mesh Directory: /home/tomk/Code/testIrrlicht2/table/mdl/
+  Image Directory: /home/tomk/Code/testIrrlicht2/table/tex/
+    mdl Directory: mdl
+    tex Directory: tex
+           Binary: False
+   Export Cameras: True
+    Export Lights: True
+   Export Physics: False
+      Export Pack: False
+Export Executable: False
+      Copy Images: True
+     Run WalkTest: True
+  Image Extension: Original
+    Selected Only: False
+     Irrlicht Ver: 1.7
+    iwalktest Env: /home/tomk/Prog/tubras-read-only/bin/iwalktest -i "$1" -a "$2"
+     imeshcvt Env: None
+    iwalktest Cmd: /home/tomk/Prog/tubras-read-only/bin/iwalktest -i "/home/tomk/Code/testIrrlicht2/table/Scene.irr" -a "/home/tomk/Code/testIrrlicht2/table/"
+
+[scene info]
+Scene Name: Scene
+Visible Layers: [0]
+Horizon Color: Color((0.05087608844041824, 0.05087608844041824, 0.05087608844041824))
+
+[animation info]
+fpsbase: 1.0000
+    fps: 24
+ sFrame: 1
+ eFrame: 250
+
+[object info]
+Object (0): Name=Cube.013, Type=MESH, Export=True, Layers=[0], NodeAnim=False, Constraints=False
+Object (1): Name=Cube.012, Type=MESH, Export=True, Layers=[0], NodeAnim=False, Constraints=False
+Object (2): Name=Cube.011, Type=MESH, Export=True, Layers=[0], NodeAnim=False, Constraints=False
+Object (3): Name=Cube.010, Type=MESH, Export=True, Layers=[0], NodeAnim=False, Constraints=False
+Object (4): Name=Cube.009, Type=MESH, Export=True, Layers=[0], NodeAnim=False, Constraints=False
+Object (5): Name=Cube.008, Type=MESH, Export=True, Layers=[0], NodeAnim=False, Constraints=False
+Object (6): Name=Cube.007, Type=MESH, Export=True, Layers=[0], NodeAnim=False, Constraints=False
+Object (7): Name=Cube.006, Type=MESH, Export=True, Layers=[0], NodeAnim=False, Constraints=False
+Object (8): Name=Cube.005, Type=MESH, Export=True, Layers=[0], NodeAnim=False, Constraints=False
+Object (9): Name=Cube.004, Type=MESH, Export=True, Layers=[0], NodeAnim=False, Constraints=False
+Object (10): Name=Cube.003, Type=MESH, Export=True, Layers=[0], NodeAnim=False, Constraints=False
+Object (11): Name=Cube.002, Type=MESH, Export=True, Layers=[0], NodeAnim=False, Constraints=False
+Object (12): Name=Cube, Type=MESH, Export=True, Layers=[0], NodeAnim=False, Constraints=False
+Object (13): Name=Cube.001, Type=MESH, Export=True, Layers=[10], NodeAnim=False, Constraints=False
+Object (14): Name=Camera.001, Type=CAMERA, Export=True, Layers=[0], NodeAnim=False, Constraints=False
+Object (15): Name=Table, Type=MESH, Export=True, Layers=[0], NodeAnim=False, Constraints=False
+Object (16): Name=Lamp, Type=LAMP, Export=True, Layers=[0], NodeAnim=False, Constraints=False
+Object (17): Name=Camera, Type=CAMERA, Export=True, Layers=[0], NodeAnim=False, Constraints=False
+
+[Mesh - ob:Cube.013, me:Cube.013]
+Parent: None
+Rotation Mode: XYZ
+Rotation Euler: Euler((0.0, 0.0, 0.0))
+Hide: False
+Hide Render: False
+UV Layers (0): 
+Primary UV Layer: None
+Double Sided: True
+Mesh VertexColors: False
+Modifiers: None
+Armatures: None
+physics_type: STATIC
+collision_bounds: BOX
+mass: 1.00
+radius: 1.00
+
+[Buffers]
+Count: 1
+   unassigned : DefaultMaterial
+
+[Mesh - ob:Cube.012, me:Cube.012]
+Parent: None
+Rotation Mode: XYZ
+Rotation Euler: Euler((0.0, 0.0, 0.0))
+Hide: False
+Hide Render: False
+UV Layers (0): 
+Primary UV Layer: None
+Double Sided: True
+Mesh VertexColors: False
+Modifiers: None
+Armatures: None
+physics_type: STATIC
+collision_bounds: BOX
+mass: 1.00
+radius: 1.00
+
+[Buffers]
+Count: 1
+   unassigned : DefaultMaterial
+
+[Mesh - ob:Cube.011, me:Cube.011]
+Parent: None
+Rotation Mode: XYZ
+Rotation Euler: Euler((0.0, 0.0, 0.0))
+Hide: False
+Hide Render: False
+UV Layers (0): 
+Primary UV Layer: None
+Double Sided: True
+Mesh VertexColors: False
+Modifiers: None
+Armatures: None
+physics_type: STATIC
+collision_bounds: BOX
+mass: 1.00
+radius: 1.00
+
+[Buffers]
+Count: 1
+   unassigned : DefaultMaterial
+
+[Mesh - ob:Cube.010, me:Cube.010]
+Parent: None
+Rotation Mode: XYZ
+Rotation Euler: Euler((0.0, 0.0, 0.0))
+Hide: False
+Hide Render: False
+UV Layers (0): 
+Primary UV Layer: None
+Double Sided: True
+Mesh VertexColors: False
+Modifiers: None
+Armatures: None
+physics_type: STATIC
+collision_bounds: BOX
+mass: 1.00
+radius: 1.00
+
+[Buffers]
+Count: 1
+   unassigned : DefaultMaterial
+
+[Mesh - ob:Cube.009, me:Cube.009]
+Parent: None
+Rotation Mode: XYZ
+Rotation Euler: Euler((0.0, 0.0, 0.0))
+Hide: False
+Hide Render: False
+UV Layers (0): 
+Primary UV Layer: None
+Double Sided: True
+Mesh VertexColors: False
+Modifiers: None
+Armatures: None
+physics_type: STATIC
+collision_bounds: BOX
+mass: 1.00
+radius: 1.00
+
+[Buffers]
+Count: 1
+   unassigned : DefaultMaterial
+
+[Mesh - ob:Cube.008, me:Cube.008]
+Parent: None
+Rotation Mode: XYZ
+Rotation Euler: Euler((0.0, 0.0, 0.0))
+Hide: False
+Hide Render: False
+UV Layers (0): 
+Primary UV Layer: None
+Double Sided: True
+Mesh VertexColors: False
+Modifiers: None
+Armatures: None
+physics_type: STATIC
+collision_bounds: BOX
+mass: 1.00
+radius: 1.00
+
+[Buffers]
+Count: 1
+   unassigned : DefaultMaterial
+
+[Mesh - ob:Cube.007, me:Cube.007]
+Parent: None
+Rotation Mode: XYZ
+Rotation Euler: Euler((0.0, 0.0, 0.0))
+Hide: False
+Hide Render: False
+UV Layers (0): 
+Primary UV Layer: None
+Double Sided: True
+Mesh VertexColors: False
+Modifiers: None
+Armatures: None
+physics_type: STATIC
+collision_bounds: BOX
+mass: 1.00
+radius: 1.00
+
+[Buffers]
+Count: 1
+   unassigned : DefaultMaterial
+
+[Mesh - ob:Cube.006, me:Cube.006]
+Parent: None
+Rotation Mode: XYZ
+Rotation Euler: Euler((0.0, 0.0, 0.0))
+Hide: False
+Hide Render: False
+UV Layers (0): 
+Primary UV Layer: None
+Double Sided: True
+Mesh VertexColors: False
+Modifiers: None
+Armatures: None
+physics_type: STATIC
+collision_bounds: BOX
+mass: 1.00
+radius: 1.00
+
+[Buffers]
+Count: 1
+   unassigned : DefaultMaterial
+
+[Mesh - ob:Cube.005, me:Cube.005]
+Parent: None
+Rotation Mode: XYZ
+Rotation Euler: Euler((0.0, 0.0, 0.0))
+Hide: False
+Hide Render: False
+UV Layers (0): 
+Primary UV Layer: None
+Double Sided: True
+Mesh VertexColors: False
+Modifiers: None
+Armatures: None
+physics_type: STATIC
+collision_bounds: BOX
+mass: 1.00
+radius: 1.00
+
+[Buffers]
+Count: 1
+   unassigned : DefaultMaterial
+
+[Mesh - ob:Cube.004, me:Cube.004]
+Parent: None
+Rotation Mode: XYZ
+Rotation Euler: Euler((0.0, 0.0, 0.0))
+Hide: False
+Hide Render: False
+UV Layers (0): 
+Primary UV Layer: None
+Double Sided: True
+Mesh VertexColors: False
+Modifiers: None
+Armatures: None
+physics_type: STATIC
+collision_bounds: BOX
+mass: 1.00
+radius: 1.00
+
+[Buffers]
+Count: 1
+   unassigned : DefaultMaterial
+
+[Mesh - ob:Cube.003, me:Cube.003]
+Parent: None
+Rotation Mode: XYZ
+Rotation Euler: Euler((0.0, 0.0, 0.0))
+Hide: False
+Hide Render: False
+UV Layers (0): 
+Primary UV Layer: None
+Double Sided: True
+Mesh VertexColors: False
+Modifiers: None
+Armatures: None
+physics_type: STATIC
+collision_bounds: BOX
+mass: 1.00
+radius: 1.00
+
+[Buffers]
+Count: 1
+   unassigned : DefaultMaterial
+
+[Mesh - ob:Cube.002, me:Cube.002]
+Parent: None
+Rotation Mode: XYZ
+Rotation Euler: Euler((0.0, 0.0, 0.0))
+Hide: False
+Hide Render: False
+UV Layers (0): 
+Primary UV Layer: None
+Double Sided: True
+Mesh VertexColors: False
+Modifiers: None
+Armatures: None
+physics_type: STATIC
+collision_bounds: BOX
+mass: 1.00
+radius: 1.00
+
+[Buffers]
+Count: 1
+   unassigned : DefaultMaterial
+
+[Mesh - ob:Cube, me:Cube]
+Parent: None
+Rotation Mode: XYZ
+Rotation Euler: Euler((0.0, 0.0, 0.0))
+Hide: False
+Hide Render: False
+UV Layers (0): 
+Primary UV Layer: None
+Double Sided: True
+Mesh VertexColors: False
+Modifiers: None
+Armatures: None
+physics_type: STATIC
+collision_bounds: BOX
+mass: 1.00
+radius: 1.00
+
+[Buffers]
+Count: 1
+   unassigned : DefaultMaterial
+
+[Mesh - ob:Table, me:Table]
+Parent: None
+Rotation Mode: XYZ
+Rotation Euler: Euler((0.0, 0.0, 0.0))
+Hide: False
+Hide Render: False
+UV Layers (2): , UVTex, UVTex.000
+Primary UV Layer: None
+Double Sided: True
+Mesh VertexColors: False
+Modifiers: None
+Armatures: None
+physics_type: STATIC
+collision_bounds: BOX
+mass: 1.00
+radius: 1.00
+
+[Image]
+imageName: textable.png
+org fullFileName: //Space/Blender/textable.png
+fullFileName: /home/tomk/Space/Blender/textable.png
+dirname: /home/tomk/Space/Blender
+fileName: textable
+fileExt: .png
+bImage.file_format: PNG
+bImage.depth: 32
+bImage.source: FILE
+bImage.packed_file: None
+bImage.library: None
+exists on disk: True
+result0: tex/textable.png
+result1: /home/tomk/Code/testIrrlicht2/table/tex/textable.png
+
+[Image]
+imageName: table_lightmap.png
+org fullFileName: //Space/Blender/table_lightmap.png
+fullFileName: /home/tomk/Space/Blender/table_lightmap.png
+dirname: /home/tomk/Space/Blender
+fileName: table_lightmap
+fileExt: .png
+bImage.file_format: PNG
+bImage.depth: 32
+bImage.source: FILE
+bImage.packed_file: None
+bImage.library: None
+exists on disk: True
+result0: tex/table_lightmap.png
+result1: /home/tomk/Code/testIrrlicht2/table/tex/table_lightmap.png
+
+[Buffers]
+Count: 1
+   table:textable.png:table_lightmap.png : DefaultMaterial
+
+[stats]
+Export Complete - 0.22 seconds - 13:23:23 02/05/11
+14 Object(s)
+14 Meshes
+1 Light(s)
+2 Image(s)
+3144/1572 Verts/Tris

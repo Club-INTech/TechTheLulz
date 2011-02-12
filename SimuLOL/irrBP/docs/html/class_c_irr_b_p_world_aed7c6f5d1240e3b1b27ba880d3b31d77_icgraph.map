@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_c_irr_b_p_world.html#a566ce1f1107d563cec07c2406946bb2c" title="CIrrBPWorld::addCollisionObject" alt="" coords="249,5,460,35"/>
+<area shape="rect" id="node7" href="$class_c_irr_b_p_manager.html#a05a11f686353171612bef3ca2d088634" title="CIrrBPManager::addConvexHullBody" alt="" coords="239,59,471,88"/>
+<area shape="rect" id="node5" href="$class_c_irr_b_p_manager.html#a58e4019b664a6f3be5500394c4950206" title="CIrrBPManager::addCollisionObjectToBulletQueue" alt="" coords="521,5,831,35"/>
+</map>

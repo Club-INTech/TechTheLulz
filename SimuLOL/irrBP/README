@@ -1,0 +1,7 @@
+Linux Info File.
+
+irrBP compiles successfully on Fedora 14.
+Precompiled libraries comes from:
+irrlicht 1.7.2
+bullet 2.7.7
+irrBP 0.31

@@ -1,0 +1,109 @@
+irrb log 0.6
+
+[general info]
+               OS: Linux 2.6.35-25-generic #44-Ubuntu SMP Fri Jan 21 17:40:44 UTC 2011
+  Blender Version: 2.56.0
+      .blend File: /home/tomk/Space/Blender/reine2.blend
+      .blend Root: /home/tomk/Space/Blender
+     .irrb Config: /home/tomk/.irrb
+   Python Version: 3.1.2 final
+
+[options]
+     Create Scene: True
+   Base Directory: /home/tomk/Code/testIrrlicht2/reine/
+  Scene Directory: /home/tomk/Code/testIrrlicht2/reine/
+   Mesh Directory: /home/tomk/Code/testIrrlicht2/reine/mdl/
+  Image Directory: /home/tomk/Code/testIrrlicht2/reine/tex/
+    mdl Directory: mdl
+    tex Directory: tex
+           Binary: False
+   Export Cameras: True
+    Export Lights: True
+   Export Physics: False
+      Export Pack: False
+Export Executable: False
+      Copy Images: True
+     Run WalkTest: True
+  Image Extension: Original
+    Selected Only: False
+     Irrlicht Ver: 1.7
+    iwalktest Env: /home/tomk/Prog/tubras-read-only/bin/iwalktest -i "$1" -a "$2"
+     imeshcvt Env: None
+    iwalktest Cmd: /home/tomk/Prog/tubras-read-only/bin/iwalktest -i "/home/tomk/Code/testIrrlicht2/reine/Scene.irr" -a "/home/tomk/Code/testIrrlicht2/reine/"
+
+[scene info]
+Scene Name: Scene
+Visible Layers: [0]
+Horizon Color: Color((0.05087608844041824, 0.05087608844041824, 0.05087608844041824))
+
+[animation info]
+fpsbase: 1.0000
+    fps: 24
+ sFrame: 1
+ eFrame: 250
+
+[object info]
+Object (0): Name=pion, Type=MESH, Export=True, Layers=[0], NodeAnim=False, Constraints=False
+Object (1): Name=Lamp, Type=LAMP, Export=True, Layers=[0], NodeAnim=False, Constraints=False
+Object (2): Name=Camera, Type=CAMERA, Export=True, Layers=[0], NodeAnim=False, Constraints=False
+
+[Mesh - ob:pion, me:pion]
+Parent: None
+Rotation Mode: XYZ
+Rotation Euler: Euler((0.0, 0.0, 0.0))
+Hide: False
+Hide Render: False
+UV Layers (2): , UVTex.000, UVTex
+Primary UV Layer: None
+Double Sided: True
+Mesh VertexColors: False
+Modifiers: None
+Armatures: None
+physics_type: STATIC
+collision_bounds: BOX
+mass: 1.00
+radius: 1.00
+
+[Image]
+imageName: reine-lightmap
+org fullFileName: //reine-lightmap.png
+fullFileName: /home/tomk/Space/Blender/reine-lightmap.png
+dirname: /home/tomk/Space/Blender
+fileName: reine-lightmap
+fileExt: .png
+bImage.file_format: PNG
+bImage.depth: 32
+bImage.source: FILE
+bImage.packed_file: None
+bImage.library: None
+exists on disk: True
+result0: tex/reine-lightmap.png
+result1: /home/tomk/Code/testIrrlicht2/reine/tex/reine-lightmap.png
+
+[Image]
+imageName: texpion.png
+org fullFileName: //texpion.png
+fullFileName: /home/tomk/Space/Blender/texpion.png
+dirname: /home/tomk/Space/Blender
+fileName: texpion
+fileExt: .png
+bImage.file_format: PNG
+bImage.depth: 24
+bImage.source: FILE
+bImage.packed_file: None
+bImage.library: None
+exists on disk: True
+result0: tex/texpion.png
+result1: /home/tomk/Code/testIrrlicht2/reine/tex/texpion.png
+
+[Buffers]
+Count: 1
+   Material.001:reine-lightmap:texpion.png : DefaultMaterial
+
+[stats]
+Export Complete - 0.13 seconds - 12:23:03 02/05/11
+1 Object(s)
+1 Mesh
+1 Light(s)
+2 Image(s)
+2112/1024 Verts/Tris

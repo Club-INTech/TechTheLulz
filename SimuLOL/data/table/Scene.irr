@@ -1,0 +1,390 @@
+<?xml version="1.0"?>
+<!-- Created 02/05/2011 13:23 by irrb v0.6 - "Irrlicht/Blender Exporter" -->
+<irr_scene>
+   <attributes>
+      <string name="Name" value="root"/>
+      <int name="Id" value="-1"/>
+      <vector3d name="Position" value="0.000000, 0.000000, 0.000000"/>
+      <vector3d name="Rotation" value="0.000000, 0.000000, 0.000000"/>
+      <vector3d name="Scale" value="1.000000, 1.000000, 1.000000"/>
+      <colorf name="AmbientLight" value="0.000000, 0.000000, 0.000000, 1.000000"/>
+      <bool name="AutomaticCulling" value="true"/>
+      <bool name="DebugDataVisible" value="false"/>
+      <bool name="IsDebugObject" value="false"/>
+      <bool name="Visible" value="true"/>
+   </attributes>
+   <userData>
+      <attributes>
+         <bool name="Physics.Enabled" value="false"/>
+         <float name="Gravity" value="-9.810000"/>
+         <colorf name="BackgroundColor" value="0.050876, 0.050876, 0.050876, 1.000000"/>
+      </attributes>
+   </userData>
+   <node type="mesh">
+      <attributes>
+         <string name="Name" value="Cube.013"/>
+         <int name="Id" value="-1"/>
+         <vector3d name="Position" value="0.000000, -0.105000, 0.000000"/>
+         <vector3d name="Rotation" value="0.000000, -0.000000, 0.000000"/>
+         <vector3d name="Scale" value="1.000000, 1.000000, 1.000000"/>
+         <bool name="Visible" value="true"/>
+         <enum name="AutomaticCulling" value="frustum_box"/>
+         <bool name="DebugDataVisible" value="false"/>
+         <bool name="IsDebugObject" value="false"/>
+         <bool name="ReadOnlyMaterials" value="false"/>
+         <string name="Mesh" value="mdl/Cube.013.irrmesh"/>
+         <enum name="HardwareMappingHint" value="never"/>
+         <enum name="HardwareMappingBufferType" value="vertexindex"/>
+      </attributes>
+      <userData>
+         <attributes>
+         </attributes>
+      </userData>
+   </node>
+   <node type="mesh">
+      <attributes>
+         <string name="Name" value="Cube.012"/>
+         <int name="Id" value="-1"/>
+         <vector3d name="Position" value="-1.039000, 0.030000, -0.865000"/>
+         <vector3d name="Rotation" value="0.000000, -0.000000, 0.000000"/>
+         <vector3d name="Scale" value="1.000000, 1.000000, 1.000000"/>
+         <bool name="Visible" value="true"/>
+         <enum name="AutomaticCulling" value="frustum_box"/>
+         <bool name="DebugDataVisible" value="false"/>
+         <bool name="IsDebugObject" value="false"/>
+         <bool name="ReadOnlyMaterials" value="false"/>
+         <string name="Mesh" value="mdl/Cube.012.irrmesh"/>
+         <enum name="HardwareMappingHint" value="never"/>
+         <enum name="HardwareMappingBufferType" value="vertexindex"/>
+      </attributes>
+      <userData>
+         <attributes>
+         </attributes>
+      </userData>
+   </node>
+   <node type="mesh">
+      <attributes>
+         <string name="Name" value="Cube.011"/>
+         <int name="Id" value="-1"/>
+         <vector3d name="Position" value="-0.361000, 0.030000, -0.865000"/>
+         <vector3d name="Rotation" value="0.000000, -0.000000, 0.000000"/>
+         <vector3d name="Scale" value="1.000000, 1.000000, 1.000000"/>
+         <bool name="Visible" value="true"/>
+         <enum name="AutomaticCulling" value="frustum_box"/>
+         <bool name="DebugDataVisible" value="false"/>
+         <bool name="IsDebugObject" value="false"/>
+         <bool name="ReadOnlyMaterials" value="false"/>
+         <string name="Mesh" value="mdl/Cube.011.irrmesh"/>
+         <enum name="HardwareMappingHint" value="never"/>
+         <enum name="HardwareMappingBufferType" value="vertexindex"/>
+      </attributes>
+      <userData>
+         <attributes>
+         </attributes>
+      </userData>
+   </node>
+   <node type="mesh">
+      <attributes>
+         <string name="Name" value="Cube.010"/>
+         <int name="Id" value="-1"/>
+         <vector3d name="Position" value="0.361000, 0.030000, -0.865000"/>
+         <vector3d name="Rotation" value="0.000000, -0.000000, 0.000000"/>
+         <vector3d name="Scale" value="1.000000, 1.000000, 1.000000"/>
+         <bool name="Visible" value="true"/>
+         <enum name="AutomaticCulling" value="frustum_box"/>
+         <bool name="DebugDataVisible" value="false"/>
+         <bool name="IsDebugObject" value="false"/>
+         <bool name="ReadOnlyMaterials" value="false"/>
+         <string name="Mesh" value="mdl/Cube.010.irrmesh"/>
+         <enum name="HardwareMappingHint" value="never"/>
+         <enum name="HardwareMappingBufferType" value="vertexindex"/>
+      </attributes>
+      <userData>
+         <attributes>
+         </attributes>
+      </userData>
+   </node>
+   <node type="mesh">
+      <attributes>
+         <string name="Name" value="Cube.009"/>
+         <int name="Id" value="-1"/>
+         <vector3d name="Position" value="1.039000, 0.030000, -0.865000"/>
+         <vector3d name="Rotation" value="0.000000, -0.000000, 0.000000"/>
+         <vector3d name="Scale" value="1.000000, 1.000000, 1.000000"/>
+         <bool name="Visible" value="true"/>
+         <enum name="AutomaticCulling" value="frustum_box"/>
+         <bool name="DebugDataVisible" value="false"/>
+         <bool name="IsDebugObject" value="false"/>
+         <bool name="ReadOnlyMaterials" value="false"/>
+         <string name="Mesh" value="mdl/Cube.009.irrmesh"/>
+         <enum name="HardwareMappingHint" value="never"/>
+         <enum name="HardwareMappingBufferType" value="vertexindex"/>
+      </attributes>
+      <userData>
+         <attributes>
+         </attributes>
+      </userData>
+   </node>
+   <node type="mesh">
+      <attributes>
+         <string name="Name" value="Cube.008"/>
+         <int name="Id" value="-1"/>
+         <vector3d name="Position" value="-0.700000, 0.030000, -0.990000"/>
+         <vector3d name="Rotation" value="0.000000, -0.000000, 0.000000"/>
+         <vector3d name="Scale" value="1.000000, 1.000000, 1.000000"/>
+         <bool name="Visible" value="true"/>
+         <enum name="AutomaticCulling" value="frustum_box"/>
+         <bool name="DebugDataVisible" value="false"/>
+         <bool name="IsDebugObject" value="false"/>
+         <bool name="ReadOnlyMaterials" value="false"/>
+         <string name="Mesh" value="mdl/Cube.008.irrmesh"/>
+         <enum name="HardwareMappingHint" value="never"/>
+         <enum name="HardwareMappingBufferType" value="vertexindex"/>
+      </attributes>
+      <userData>
+         <attributes>
+         </attributes>
+      </userData>
+   </node>
+   <node type="mesh">
+      <attributes>
+         <string name="Name" value="Cube.007"/>
+         <int name="Id" value="-1"/>
+         <vector3d name="Position" value="0.700000, 0.030000, -0.990000"/>
+         <vector3d name="Rotation" value="0.000000, -0.000000, 0.000000"/>
+         <vector3d name="Scale" value="1.000000, 1.000000, 1.000000"/>
+         <bool name="Visible" value="true"/>
+         <enum name="AutomaticCulling" value="frustum_box"/>
+         <bool name="DebugDataVisible" value="false"/>
+         <bool name="IsDebugObject" value="false"/>
+         <bool name="ReadOnlyMaterials" value="false"/>
+         <string name="Mesh" value="mdl/Cube.007.irrmesh"/>
+         <enum name="HardwareMappingHint" value="never"/>
+         <enum name="HardwareMappingBufferType" value="vertexindex"/>
+      </attributes>
+      <userData>
+         <attributes>
+         </attributes>
+      </userData>
+   </node>
+   <node type="mesh">
+      <attributes>
+         <string name="Name" value="Cube.006"/>
+         <int name="Id" value="-1"/>
+         <vector3d name="Position" value="1.300000, 0.030000, 0.650000"/>
+         <vector3d name="Rotation" value="0.000000, -0.000000, 0.000000"/>
+         <vector3d name="Scale" value="1.000000, 1.000000, 1.000000"/>
+         <bool name="Visible" value="true"/>
+         <enum name="AutomaticCulling" value="frustum_box"/>
+         <bool name="DebugDataVisible" value="false"/>
+         <bool name="IsDebugObject" value="false"/>
+         <bool name="ReadOnlyMaterials" value="false"/>
+         <string name="Mesh" value="mdl/Cube.006.irrmesh"/>
+         <enum name="HardwareMappingHint" value="never"/>
+         <enum name="HardwareMappingBufferType" value="vertexindex"/>
+      </attributes>
+      <userData>
+         <attributes>
+         </attributes>
+      </userData>
+   </node>
+   <node type="mesh">
+      <attributes>
+         <string name="Name" value="Cube.005"/>
+         <int name="Id" value="-1"/>
+         <vector3d name="Position" value="-1.300000, 0.030000, 0.650000"/>
+         <vector3d name="Rotation" value="0.000000, -0.000000, 0.000000"/>
+         <vector3d name="Scale" value="1.000000, 1.000000, 1.000000"/>
+         <bool name="Visible" value="true"/>
+         <enum name="AutomaticCulling" value="frustum_box"/>
+         <bool name="DebugDataVisible" value="false"/>
+         <bool name="IsDebugObject" value="false"/>
+         <bool name="ReadOnlyMaterials" value="false"/>
+         <string name="Mesh" value="mdl/Cube.005.irrmesh"/>
+         <enum name="HardwareMappingHint" value="never"/>
+         <enum name="HardwareMappingBufferType" value="vertexindex"/>
+      </attributes>
+      <userData>
+         <attributes>
+         </attributes>
+      </userData>
+   </node>
+   <node type="mesh">
+      <attributes>
+         <string name="Name" value="Cube.004"/>
+         <int name="Id" value="-1"/>
+         <vector3d name="Position" value="-1.511000, 0.030000, 0.000000"/>
+         <vector3d name="Rotation" value="0.000000, -0.000000, 0.000000"/>
+         <vector3d name="Scale" value="1.000000, 1.000000, 1.000000"/>
+         <bool name="Visible" value="true"/>
+         <enum name="AutomaticCulling" value="frustum_box"/>
+         <bool name="DebugDataVisible" value="false"/>
+         <bool name="IsDebugObject" value="false"/>
+         <bool name="ReadOnlyMaterials" value="false"/>
+         <string name="Mesh" value="mdl/Cube.004.irrmesh"/>
+         <enum name="HardwareMappingHint" value="never"/>
+         <enum name="HardwareMappingBufferType" value="vertexindex"/>
+      </attributes>
+      <userData>
+         <attributes>
+         </attributes>
+      </userData>
+   </node>
+   <node type="mesh">
+      <attributes>
+         <string name="Name" value="Cube.003"/>
+         <int name="Id" value="-1"/>
+         <vector3d name="Position" value="1.511000, 0.030000, 0.000000"/>
+         <vector3d name="Rotation" value="0.000000, -0.000000, 0.000000"/>
+         <vector3d name="Scale" value="1.000000, 1.000000, 1.000000"/>
+         <bool name="Visible" value="true"/>
+         <enum name="AutomaticCulling" value="frustum_box"/>
+         <bool name="DebugDataVisible" value="false"/>
+         <bool name="IsDebugObject" value="false"/>
+         <bool name="ReadOnlyMaterials" value="false"/>
+         <string name="Mesh" value="mdl/Cube.003.irrmesh"/>
+         <enum name="HardwareMappingHint" value="never"/>
+         <enum name="HardwareMappingBufferType" value="vertexindex"/>
+      </attributes>
+      <userData>
+         <attributes>
+         </attributes>
+      </userData>
+   </node>
+   <node type="mesh">
+      <attributes>
+         <string name="Name" value="Cube.002"/>
+         <int name="Id" value="-1"/>
+         <vector3d name="Position" value="0.000000, 0.030000, -1.061000"/>
+         <vector3d name="Rotation" value="0.000000, -0.000000, 0.000000"/>
+         <vector3d name="Scale" value="1.000000, 1.000000, 1.000000"/>
+         <bool name="Visible" value="true"/>
+         <enum name="AutomaticCulling" value="frustum_box"/>
+         <bool name="DebugDataVisible" value="false"/>
+         <bool name="IsDebugObject" value="false"/>
+         <bool name="ReadOnlyMaterials" value="false"/>
+         <string name="Mesh" value="mdl/Cube.002.irrmesh"/>
+         <enum name="HardwareMappingHint" value="never"/>
+         <enum name="HardwareMappingBufferType" value="vertexindex"/>
+      </attributes>
+      <userData>
+         <attributes>
+         </attributes>
+      </userData>
+   </node>
+   <node type="mesh">
+      <attributes>
+         <string name="Name" value="Cube"/>
+         <int name="Id" value="-1"/>
+         <vector3d name="Position" value="0.000000, 0.030000, 1.061000"/>
+         <vector3d name="Rotation" value="0.000000, -0.000000, 0.000000"/>
+         <vector3d name="Scale" value="1.000000, 1.000000, 1.000000"/>
+         <bool name="Visible" value="true"/>
+         <enum name="AutomaticCulling" value="frustum_box"/>
+         <bool name="DebugDataVisible" value="false"/>
+         <bool name="IsDebugObject" value="false"/>
+         <bool name="ReadOnlyMaterials" value="false"/>
+         <string name="Mesh" value="mdl/Cube.irrmesh"/>
+         <enum name="HardwareMappingHint" value="never"/>
+         <enum name="HardwareMappingBufferType" value="vertexindex"/>
+      </attributes>
+      <userData>
+         <attributes>
+         </attributes>
+      </userData>
+   </node>
+   <node type="camera">
+      <attributes>
+         <string name="Name" value="Camera.001"/>
+         <int name="Id" value="-1"/>
+         <vector3d name="Position" value="0.000000, 2.000000, 0.000000"/>
+         <vector3d name="Rotation" value="90.000003, -0.000000, 0.000000"/>
+         <vector3d name="Scale" value="1.000000, 1.000000, 1.000000"/>
+         <bool name="Visible" value="true"/>
+         <enum name="AutomaticCulling" value="frustum_box"/>
+         <bool name="DebugDataVisible" value="false"/>
+         <bool name="IsDebugObject" value="false"/>
+         <bool name="ReadOnlyMaterials" value="false"/>
+         <vector3d name="Target" value="0.000000, 0.000000, 0.000000"/>
+         <vector3d name="UpVector" value="0.000000, 1.000000, 0.000000"/>
+         <float name="Fovy" value="0.857556"/>
+         <float name="Aspect" value="1.250000"/>
+         <float name="ZNear" value="0.10"/>
+         <float name="ZFar" value="100.00"/>
+      </attributes>
+      <userData>
+         <attributes>
+         </attributes>
+      </userData>
+   </node>
+   <node type="mesh">
+      <attributes>
+         <string name="Name" value="Table"/>
+         <int name="Id" value="-1"/>
+         <vector3d name="Position" value="0.000000, 0.000000, 0.000000"/>
+         <vector3d name="Rotation" value="0.000000, -0.000000, 0.000000"/>
+         <vector3d name="Scale" value="1.000000, 1.000000, 1.000000"/>
+         <bool name="Visible" value="true"/>
+         <enum name="AutomaticCulling" value="frustum_box"/>
+         <bool name="DebugDataVisible" value="false"/>
+         <bool name="IsDebugObject" value="false"/>
+         <bool name="ReadOnlyMaterials" value="false"/>
+         <string name="Mesh" value="mdl/Table.irrmesh"/>
+         <enum name="HardwareMappingHint" value="never"/>
+         <enum name="HardwareMappingBufferType" value="vertexindex"/>
+      </attributes>
+      <userData>
+         <attributes>
+         </attributes>
+      </userData>
+   </node>
+   <node type="light">
+      <attributes>
+         <string name="Name" value="Lamp"/>
+         <int name="Id" value="-1"/>
+         <vector3d name="Position" value="1.186747, 1.563860, 0.314581"/>
+         <vector3d name="Rotation" value="42.466411, -107.220760, 10.743672"/>
+         <vector3d name="Scale" value="1.000000, 1.000000, 1.000000"/>
+         <bool name="Visible" value="true"/>
+         <enum name="AutomaticCulling" value="frustum_box"/>
+         <bool name="DebugDataVisible" value="false"/>
+         <bool name="IsDebugObject" value="false"/>
+         <bool name="ReadOnlyMaterials" value="false"/>
+         <enum name="LightType" value="Point"/>
+         <colorf name="AmbientColor" value="0.000000,0.000000, 0.000000, 1.000000"/>
+         <colorf name="DiffuseColor" value="1.000000, 1.000000, 1.000000, 1.000000"/>
+         <colorf name="SpecularColor" value="1.000000,1.000000, 1.000000, 1.000000"/>
+         <vector3d name="Attenuation" value="0.000000 0.500000 0.000000"/>
+         <float name="Radius" value="60.00"/>
+         <bool name="CastShadows" value="true"/>
+      </attributes>
+      <userData>
+         <attributes>
+         </attributes>
+      </userData>
+   </node>
+   <node type="camera">
+      <attributes>
+         <string name="Name" value="Camera"/>
+         <int name="Id" value="-1"/>
+         <vector3d name="Position" value="2.968896, 1.635437, -2.683564"/>
+         <vector3d name="Rotation" value="27.098161, -46.688390, -0.903519"/>
+         <vector3d name="Scale" value="1.000000, 1.000000, 1.000000"/>
+         <bool name="Visible" value="true"/>
+         <enum name="AutomaticCulling" value="frustum_box"/>
+         <bool name="DebugDataVisible" value="false"/>
+         <bool name="IsDebugObject" value="false"/>
+         <bool name="ReadOnlyMaterials" value="false"/>
+         <vector3d name="Target" value="0.000000, 0.000000, 0.000000"/>
+         <vector3d name="UpVector" value="0.000000, 1.000000, 0.000000"/>
+         <float name="Fovy" value="0.857556"/>
+         <float name="Aspect" value="1.250000"/>
+         <float name="ZNear" value="0.10"/>
+         <float name="ZFar" value="100.00"/>
+      </attributes>
+      <userData>
+         <attributes>
+         </attributes>
+      </userData>
+   </node>
+</irr_scene>
