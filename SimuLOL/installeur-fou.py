@@ -136,7 +136,7 @@ run("make")
 cd("..")
 
 #Ronald final
-system("firefox http://www.youtube.com/watch?v=yRgzLAmbuws &")
+#system("firefox http://www.youtube.com/watch?v=yRgzLAmbuws &")
 print_lol("Lancement de Ronald Insanity 2...")
 attente_inutile(10)
 
