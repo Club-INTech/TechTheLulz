@@ -1,19 +1,19 @@
 irrb log 0.6
 
 [general info]
-               OS: Linux 2.6.35-24-generic #42-Ubuntu SMP Thu Dec 2 02:41:37 UTC 2010
+               OS: Linux 2.6.35-25-generic #44-Ubuntu SMP Fri Jan 21 17:40:44 UTC 2011
   Blender Version: 2.56.0
-      .blend File: /home/tomk/Space/Blender/roi.blend
+      .blend File: /home/tomk/Space/Blender/roi1.blend
       .blend Root: /home/tomk/Space/Blender
      .irrb Config: /home/tomk/.irrb
    Python Version: 3.1.2 final
 
 [options]
      Create Scene: True
-   Base Directory: /home/tomk/Code/testIrrlicht/roi/
-  Scene Directory: /home/tomk/Code/testIrrlicht/roi/
-   Mesh Directory: /home/tomk/Code/testIrrlicht/roi/mdl/
-  Image Directory: /home/tomk/Code/testIrrlicht/roi/tex/
+   Base Directory: /home/tomk/GIT_INTECH/intech/TechTheLulz/SimuLOL/data/roi/
+  Scene Directory: /home/tomk/GIT_INTECH/intech/TechTheLulz/SimuLOL/data/roi/
+   Mesh Directory: /home/tomk/GIT_INTECH/intech/TechTheLulz/SimuLOL/data/roi/mdl/
+  Image Directory: /home/tomk/GIT_INTECH/intech/TechTheLulz/SimuLOL/data/roi/tex/
     mdl Directory: mdl
     tex Directory: tex
            Binary: False
@@ -28,8 +28,8 @@ Export Executable: False
     Selected Only: False
      Irrlicht Ver: 1.7
     iwalktest Env: /home/tomk/Prog/tubras-read-only/bin/iwalktest -i "$1" -a "$2"
-     imeshcvt Env: /home/tomk/Prog/tubras-read-only/bin/imeshcvt
-    iwalktest Cmd: /home/tomk/Prog/tubras-read-only/bin/iwalktest -i "/home/tomk/Code/testIrrlicht/roi/Scene.irr" -a "/home/tomk/Code/testIrrlicht/roi/"
+     imeshcvt Env: None
+    iwalktest Cmd: /home/tomk/Prog/tubras-read-only/bin/iwalktest -i "/home/tomk/GIT_INTECH/intech/TechTheLulz/SimuLOL/data/roi/Scene.irr" -a "/home/tomk/GIT_INTECH/intech/TechTheLulz/SimuLOL/data/roi/"
 
 [scene info]
 Scene Name: Scene
@@ -65,22 +65,6 @@ mass: 1.00
 radius: 1.00
 
 [Image]
-imageName: roi-lightmap
-org fullFileName: //roi-lightmap.png
-fullFileName: /home/tomk/Space/Blender/roi-lightmap.png
-dirname: /home/tomk/Space/Blender
-fileName: roi-lightmap
-fileExt: .png
-bImage.file_format: PNG
-bImage.depth: 32
-bImage.source: FILE
-bImage.packed_file: None
-bImage.library: None
-exists on disk: True
-result0: tex/roi-lightmap.png
-result1: /home/tomk/Code/testIrrlicht/roi/tex/roi-lightmap.png
-
-[Image]
 imageName: texpion.png
 org fullFileName: //texpion.png
 fullFileName: /home/tomk/Space/Blender/texpion.png
@@ -94,14 +78,30 @@ bImage.packed_file: None
 bImage.library: None
 exists on disk: True
 result0: tex/texpion.png
-result1: /home/tomk/Code/testIrrlicht/roi/tex/texpion.png
+result1: /home/tomk/GIT_INTECH/intech/TechTheLulz/SimuLOL/data/roi/tex/texpion.png
+
+[Image]
+imageName: roi-lightmap.png
+org fullFileName: //roi-lightmap.png
+fullFileName: /home/tomk/Space/Blender/roi-lightmap.png
+dirname: /home/tomk/Space/Blender
+fileName: roi-lightmap
+fileExt: .png
+bImage.file_format: PNG
+bImage.depth: 32
+bImage.source: FILE
+bImage.packed_file: None
+bImage.library: None
+exists on disk: True
+result0: tex/roi-lightmap.png
+result1: /home/tomk/GIT_INTECH/intech/TechTheLulz/SimuLOL/data/roi/tex/roi-lightmap.png
 
 [Buffers]
 Count: 1
-   Material.001:roi-lightmap:texpion.png : DefaultMaterial
+   Material.001:texpion.png:roi-lightmap.png : DefaultMaterial
 
 [stats]
-Export Complete - 0.14 seconds - 14:49:14 01/29/11
+Export Complete - 0.15 seconds - 22:57:09 02/15/11
 1 Object(s)
 1 Mesh
 1 Light(s)

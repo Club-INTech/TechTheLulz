@@ -23,14 +23,14 @@
          <bool name="UseMipMaps" value="true"/>
          <int name="AntiAliasing" value="1"/>
          <int name="ColorMask" value="15"/>
-         <texture name="Texture1" value="tex/texpion.png"/>
+         <texture name="Texture1" value="data/pion/tex/texpion.png"/>
          <enum name="TextureWrapU1" value="texture_clamp_repeat"/>
          <enum name="TextureWrapV1" value="texture_clamp_repeat"/>
          <bool name="BilinearFilter1" value="true"/>
          <bool name="TrilinearFilter1" value="false"/>
          <int name="AnisotropicFilter1" value="0"/>
          <int name="LODBias1" value="0"/>
-         <texture name="Texture2" value="tex/pion-lightmap.png"/>
+         <texture name="Texture2" value="data/pion/tex/pion-lightmap.png"/>
          <enum name="TextureWrapU2" value="texture_clamp_repeat"/>
          <enum name="TextureWrapV2" value="texture_clamp_repeat"/>
          <bool name="BilinearFilter2" value="true"/>

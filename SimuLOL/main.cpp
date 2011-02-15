@@ -62,6 +62,7 @@ char* boxes[N_BOXES]={
 };
 	const double k1=.35;
 	const double z1=.025;
+	const double z1r=.15;
 	const double k2=.275;
     const double z2=.03;
 
@@ -108,14 +109,14 @@ char* boxes[N_BOXES]={
 
 #define N_ROIS 2
 vector3df pos_rois[N_ROIS] = {
-vector3df(1.25,z1,1*k1),
-vector3df(-1.25,z1,1*k1)
+vector3df(1.25,z1r,1*k1),
+vector3df(-1.25,z1r,1*k1)
 };
 
 #define N_REINES 2
 vector3df pos_reines[N_REINES] = {
-vector3df(1.25,z1,1*k1-k2*3),
-vector3df(-1.25,z1,1*k1-k2*3)
+vector3df(1.25,z1r,1*k1-k2*3),
+vector3df(-1.25,z1r,1*k1-k2*3)
 };
 
 class K : public IEventReceiver
@@ -178,7 +179,8 @@ int main(int argc, char** argv)
 
 	K* k = new K();
 
-
+	//parametres pour mon laptop de gamer
+	/*
 	SIrrlichtCreationParameters* params=new SIrrlichtCreationParameters();
 	params->AntiAlias=(16);
 	params->Bits=(32);
@@ -186,6 +188,18 @@ int main(int argc, char** argv)
 	params->Fullscreen=1;
 	params->DriverType=(EDT_OPENGL);
 	params->EventReceiver=k;
+	*/
+	
+	//Parametres moins beaux
+	SIrrlichtCreationParameters* params=new SIrrlichtCreationParameters();
+	params->AntiAlias=(16);
+	params->Bits=(32);
+	params->WindowSize=(dimension2d<u32>(1680, 1050));
+	params->Fullscreen=1;
+	params->DriverType=(EDT_OPENGL);
+	params->EventReceiver=k;
+	params->Stencilbuffer=true;
+
 
 	IrrlichtDevice *device = createDeviceEx(*params);
 
@@ -208,8 +222,7 @@ int main(int argc, char** argv)
 	/*
 	We add a hello world label to the window, using the GUI environment.
 	*/
-	guienv->addStaticText(L"Hello World!",
-						  rect<int>(10,10,200,22), true);
+	guienv->addStaticText(L"Hello World!", rect<int>(10,10,200,22), true,true,0,-1,true);
 
 	/*
 	To display something interesting, we load a Quake 2 model
@@ -226,9 +239,10 @@ int main(int argc, char** argv)
 
 	if (table)
 	{
-		table->setMaterialFlag(EMF_LIGHTING, false);
+		table->setMaterialFlag(EMF_LIGHTING, true);
+		table->setMaterialFlag(EMF_ANTI_ALIASING, true);
 		//table->setFrameLoop(0, 310);
-		table->setMaterialType(video::EMT_LIGHTMAP);
+		table->setMaterialType(video::EMT_LIGHTMAP_LIGHTING_M2    );
 		table->setMaterialTexture( 0, driver->getTexture("data/table/tex/textable.png") );
 		table->setMaterialTexture( 1, driver->getTexture("data/table/tex/table_lightmap.png") );
 	}
@@ -238,9 +252,10 @@ int main(int argc, char** argv)
 
 	if (pion)
 	{
-		pion->setMaterialFlag(EMF_LIGHTING, false);
+		pion->setMaterialFlag(EMF_LIGHTING, true);
+		pion->setMaterialFlag(EMF_ANTI_ALIASING, true);
 		//pion->setFrameLoop(0, 310);
-		pion->setMaterialType(video::EMT_LIGHTMAP);
+		pion->setMaterialType(video::EMT_LIGHTMAP_LIGHTING_M2  );
 		pion->setMaterialTexture( 0, driver->getTexture("data/pion/tex/texpion.png") );
 		pion->setMaterialTexture( 1, driver->getTexture("data/pion/tex/pion-lightmap.png") );
 	}
@@ -250,9 +265,10 @@ int main(int argc, char** argv)
 
 	if (reine)
 	{
-		reine->setMaterialFlag(EMF_LIGHTING, false);
+		reine->setMaterialFlag(EMF_LIGHTING, true);
+		reine->setMaterialFlag(EMF_ANTI_ALIASING, true);
 		//reine->setFrameLoop(0, 310);
-		reine->setMaterialType(video::EMT_LIGHTMAP);
+		reine->setMaterialType(video::EMT_LIGHTMAP_LIGHTING_M2  );
 		reine->setMaterialTexture( 0, driver->getTexture("data/reine/tex/texreine.png") );
 		reine->setMaterialTexture( 1, driver->getTexture("data/reine/tex/reine-lightmap.png") );
 	}
@@ -262,9 +278,10 @@ int main(int argc, char** argv)
 
 	if (roi)
 	{
-		roi->setMaterialFlag(EMF_LIGHTING, false);
+		roi->setMaterialFlag(EMF_LIGHTING, true);
+		roi->setMaterialFlag(EMF_ANTI_ALIASING, true);
 		//roi->setFrameLoop(0, 310);
-		roi->setMaterialType(video::EMT_LIGHTMAP);
+		roi->setMaterialType(video::EMT_LIGHTMAP_LIGHTING_M2  );
 		roi->setMaterialTexture( 0, driver->getTexture("data/roi/tex/texroi.png") );
 		roi->setMaterialTexture( 1, driver->getTexture("data/roi/tex/roi-lightmap.png") );
 	}
@@ -280,7 +297,7 @@ int main(int argc, char** argv)
 	To look at the mesh, we place a camera into 3d space at the position
 	(0, 30, -40). The camera looks from there to (0,5,0).
 	*/
-	scene::ICameraSceneNode* camera = smgr->addCameraSceneNode(0, vector3df(2,2,1), vector3df(0,-.5,0));
+	scene::ICameraSceneNode* camera = smgr->addCameraSceneNode(0, vector3df(0,2,1.5), vector3df(0,-.5,0.1));
 
 	/*
 	Ok, now we have set up the scene, lets draw everything:
@@ -303,13 +320,16 @@ int main(int argc, char** argv)
 
 
 
-
-
+//lumiere!
+#define LUM .4
+	scene::ILightSceneNode* light1 = smgr->addLightSceneNode(0, core::vector3df(-1,1,0),video::SColorf(1.0f, 1.0f, 1.0f, 1.0f), LUM);
+	scene::ILightSceneNode* light2 = smgr->addLightSceneNode(0, core::vector3df(1,1,0),video::SColorf(1.0f, 1.0f, 1.0f, 1.0f), LUM);
+	scene::ILightSceneNode* light3 = smgr->addLightSceneNode(0, core::vector3df(0,1,1),video::SColorf(1.0f, 1.0f, 1.0f, 1.0f), LUM);
+	scene::ILightSceneNode* light4 = smgr->addLightSceneNode(0, core::vector3df(0,1,-1),video::SColorf(1.0f, 1.0f, 1.0f, 1.0f), LUM);
 
 	bulletmgr = createBulletManager(device);
         bulletmgr->getWorld()->setGravity(vector3df(0,-9.81,0));
-        bulletmgr->addTrimesh(table,0);
-
+   //     bulletmgr->addTrimesh(table,0);
 
 
 int i=0;
@@ -317,9 +337,24 @@ for(i=0;i<N_PIONS;++i)
 {
     ISceneNode* tmp = pion->clone();
     tmp->setPosition(pos_pions[i]);
+    CIrrBPRigidBody * body = bulletmgr->addRigidCylinder(tmp,4,Y);
+    body->getBodyPtr()->setFriction(1.0f);
+//    bulletmgr->build6DOFConstraint(body,vector3df(0,0,0))->appuiPlan();
+}
+
+for(i=0;i<N_ROIS;++i)
+{
+    ISceneNode* tmp = roi->clone();
+    tmp->setPosition(pos_rois[i]);
     bulletmgr->addRigidCylinder(tmp,4,Y);
 }
 
+for(i=0;i<N_REINES;++i)
+{
+    ISceneNode* tmp = reine->clone();
+    tmp->setPosition(pos_reines[i]);
+    bulletmgr->addRigidCylinder(tmp,4,Y);
+}
 
 for(i=0 ; i<N_BOXES; ++i)
 {
@@ -329,17 +364,20 @@ for(i=0 ; i<N_BOXES; ++i)
 	{
 	    box->setPosition(pos_boxes[i]);
 		box->setVisible(false);
-   //     CIrrBPBoxBody * bbox = bulletmgr->addRigidBox(box,0);
+        CIrrBPBoxBody * bbox = bulletmgr->addRigidBox(box,0);
 	}
 }
 //
-
+/*
 CIrrBPRigidBody * broi = bulletmgr->addRigidCylinder(roi,3,Y);
 CIrrBPRigidBody * bpion = bulletmgr->addRigidCylinder(pion,1,Y);
 CIrrBPRigidBody * breine = bulletmgr->addRigidCylinder(reine,300,Y);
+*/
+CIrrBPRigidBody * broi = bulletmgr->addRigidBox(roi,3,Y);
+CIrrBPRigidBody * bpion = bulletmgr->addRigidBox(pion,1,Y);
+CIrrBPRigidBody * breine = bulletmgr->addRigidCylinder(reine,30,Y);
 
-
-
+//    bulletmgr->build6DOFConstraint(breine,vector3df(0,0,0))->appuiPlan();
 
 
 
@@ -367,7 +405,8 @@ CIrrBPRigidBody * breine = bulletmgr->addRigidCylinder(reine,300,Y);
 		GUI Environment draw their content. With the endScene() call
 		everything is presented on the screen.
 		*/
-		driver->beginScene(true, true, SColor(0,200,200,255));
+		//driver->beginScene(true, true, SColor(0,200,200,255));
+		driver->beginScene(true, true, SColor(0,0,0,0));
 
 
 		smgr->drawAll();
@@ -377,17 +416,23 @@ CIrrBPRigidBody * breine = bulletmgr->addRigidCylinder(reine,300,Y);
 
 		vector3df p = reine->getPosition();
 
+		const double F=100.0;
+
 		if(k->IsKeyDown(KEY_ESCAPE))
 			break;
-		if(k->IsKeyDown(KEY_KEY_Z))
-            breine->setPosition(vector3df(p.X-.01,p.Y,p.Z));
-			//reine->setPosition(vector3df(p.X-.01,p.Y,p.Z));
-		if(k->IsKeyDown(KEY_KEY_S))
-			breine->setPosition(vector3df(p.X+.01,p.Y,p.Z));
 		if(k->IsKeyDown(KEY_KEY_D))
-			breine->setPosition(vector3df(p.X,p.Y,p.Z+.01));
+            		breine->applyCentralForce(vector3df(-F,0,0));
+			//breine->setPosition(vector3df(p.X-.01,p.Y,p.Z));
+			//reine->setPosition(vector3df(p.X-.01,p.Y,p.Z));
 		if(k->IsKeyDown(KEY_KEY_Q))
-			breine->setPosition(vector3df(p.X,p.Y,p.Z-.01));
+			breine->applyCentralForce(vector3df(F,0,.0));
+			//breine->setPosition(vector3df(p.X+.01,p.Y,p.Z));
+		if(k->IsKeyDown(KEY_KEY_S))
+			breine->applyCentralForce(vector3df(.0,0,F));
+			//breine->setPosition(vector3df(p.X,p.Y,p.Z+.01));
+		if(k->IsKeyDown(KEY_KEY_Z))
+			breine->applyCentralForce(vector3df(.0,0,-F));
+			//breine->setPosition(vector3df(p.X,p.Y,p.Z-.01));
 
         bulletmgr->stepSimulation();
 
