@@ -1,0 +1,12 @@
+#include "my_io.h"
+#include <stdio.h>
+
+void my_putc(char c)
+{
+	putchar(c);
+}
+
+void main()
+{
+	my_printf("j'ai  %d, %ld, %f pommes et fraises\n",-42,68L,-3.14);
+}
