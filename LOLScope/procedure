@@ -1,0 +1,58 @@
+0 - pour commander avec joystick :
+
+cd /home/tomk/Code2/joyControl
+python joyControl2.py 
+
+
+1 - Uploader Oscillol : 
+
+cd /home/tomk/stm/Oscillol/
+jtag/stm32loader.py -e -w -v main.bin
+
+
+2 - faire rouler un peu en regardant sous LOLScope, puis calculer les stats (note: ch0-1:prise sans scotch, gauche, ch2-3: droite, prise avec scotch blanc) :
+
+cd /home/tomk/Code2/LOLScope/
+./LOLScope
+python stats.py
+
+
+3 - Mettre les valeurs correctes dans Calibrateur-correcteur et uploader, collecter avec gtkterm :
+
+cd /home/tomk/stm/Calibrateur-correcteur/
+gedit main.c&
+
+make
+jtag/stm32loader.py -e -w -v main.bin
+
+gtkterm -p /dev/ttyUSB0 -s 115200
+
+4 - Remplir les valeurs dans le calculateur de reciproque, lancer, verifier :
+
+cd /home/tomk/Code2/Calibrateur-reciproque/
+gedit in-raw&
+
+python mainb.py > out.csv
+ipython -pylab plot-verif.py
+
+gedit out-c&
+
+
+5 - Copier les vals dans le tableau d'AsservPHAS2, et les min/max dans calibrations.h , uploader:
+
+cd /home/tomk/stm/AsservPHAS2/
+gedit calibrations.h&
+gedit calibr_1&
+gedit calibr_2&
+
+make clean
+make
+jtag/stm32loader.py -e -w -v main.bin
+
+
+6 - RoboMORT:
+
+cd /home/tomk/Code2/RoboMORT/
+codeblocks RoboMORT.cbp
+
+F8
