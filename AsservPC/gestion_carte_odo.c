@@ -34,6 +34,7 @@ bool odo_init()
 
     for (i = 0; i < 255; ++i) {
 	sprintf(port, "/dev/ttyUSB%d", i);
+	printf("looking for odo @%s\n",port);
 	odo_serial = new SerialPort(port);
 	odo_serial->SetBaudRate(SerialPort::BAUD_115200);
 	odo_serial->Open();
@@ -59,6 +60,7 @@ bool odo_init()
 
 		    if (c0 == '?') {
 			if (rbuf[1] != 'o') {
+	 		    printf("found odo @%s\n",port);
 			    break;
 			} else {
 			    odo_serial->Close();
