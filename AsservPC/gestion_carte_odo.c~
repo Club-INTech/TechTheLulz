@@ -1,0 +1,124 @@
+#include <unistd.h>
+
+SerialPort* Serial;
+double odo_x = 0.0;
+double odo_y = 0.0;
+double odo_a = 0.0;
+double odo_g = 0.0;
+double odo_d = 0.0;
+
+void odo_flush()
+{
+    while (Serial.IsDataAvailable()) {
+	Serial.ReadByte();
+    }
+}
+
+bool odo_init()
+{
+    int i;
+    bool ok = false;
+    char port[1000];
+    port = "";
+
+    for (i = 0; i < 255; ++i) {
+	ssprintf(port, "/dev/ttyUSB%d", i);
+	Serial = new SerialPort(port);
+	Serial->Open(BAUD_115200);
+	
+	if (Serial->IsOpen())
+	{
+	    odo_flush();
+	    Serial->Write("?#");
+	    usleep(50000);
+
+
+	    while (Serial.IsDataAvailable()) {
+		char c = Serial.ReadByte();
+		if (c == 0xA)
+		    continue;
+		rbuf[rb_cur++] = c;
+		rb_cur %= RBUF_SIZE - 2;
+		if (c == '#') {
+		    rbuf[rb_cur++] = '\0';
+		    rb_cur = 0;
+		    printf("recv %s\n", rbuf);
+
+		    char c0 = rbuf[0];
+
+		    if (c0 == '?') {
+			if (rbuf[1] != 'o') {
+			    break;
+			} else
+			{
+			    Serial->Close();
+			    delete Serial;
+			    continue;
+			}
+		    } else
+		    {
+		     	 Serial->Close();
+			    delete Serial;
+			continue;
+		}
+		}
+	    }
+	}
+
+	ok = true;
+    }
+
+
+    return ok;
+}
+
+void odo_get_coord()
+{
+    Serial.Write("R#");
+    Serial.Write("r#");
+
+    usleep(50000);
+    
+    while (Serial.IsDataAvailable()) {
+	char c = Serial.ReadByte();
+	if (c == 0xA)
+	    continue;
+	rbuf[rb_cur++] = c;
+	rb_cur %= RBUF_SIZE - 2;
+	if (c == '#') {
+	    rbuf[rb_cur++] = '\0';
+	    rb_cur = 0;
+	    printf("recv %s\n", rbuf);
+
+	    char c0 = rbuf[0];
+
+	    if (c0 == 'X') {
+		long nx;
+		sscanf(rbuf, "X%ld#", &nx);
+		odo_x = (double) nx / 1000.0;
+	    }
+	    if (c0 == 'Y') {
+		long ny;
+		sscanf(rbuf, "Y%ld#", &ny);
+		odo_y = (double) ny / 1000.0;
+	    }
+	    if (c0 == 'A') {
+		long na;
+		sscanf(rbuf, "A%ld#", &na);
+		odo_a = PI + (double) na / 1000.0;
+	    }
+	    if (c0 == 'G') {
+		double ng;
+		sscanf(rbuf, "G%f#", &ng);
+		odo_g = ng;
+	    }
+	    if (c0 == 'D') {
+		double nd;
+		sscanf(rbuf, "D%f#", &nd);
+		odo_d = nd;
+	    }
+	}
+	if (!(Serial.IsDataAvailable()))
+	    sleep(50000);
+    }
+}

@@ -1,0 +1,6 @@
+AsservTest: main.c
+#rm AsservTest
+	gcc -Wall -g `allegro-config --libs` `allegro-config --cppflags` main.c -o AsservTest 
+
+clean:
+	rm -f *.o AsservTest
