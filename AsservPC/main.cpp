@@ -105,6 +105,7 @@ int main()
 {
 	// INITIALISATION
 	init();
+	odo_init();
 	buffer=create_bitmap(screen->w,screen->h);
 	
 	ttw.x=2.0;
@@ -179,6 +180,7 @@ int main()
 		ttw.angle+=ttw.delta_angle/2.0;//oui, encore.
 		*/
 		////////////////////////////////// /LOL
+		odo_get_coord();
 		
 		ttw.x=odo_x;
 		ttw.y=odo_y;
