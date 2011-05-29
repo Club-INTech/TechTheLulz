@@ -348,14 +348,15 @@ int main ( void )
 
 
 //	my_printf("4 EXTI_IMR=%d\n",EXTI->IMR);
-
+*/
 	// Enable the USARTx Interrupt
+	NVIC_InitTypeDef NVIC_InitStructure;
 	NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
 	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 4;
 	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init ( &NVIC_InitStructure );
-	 */
+	
 	InitADC1();
 	USART_ITConfig ( USART1, USART_IT_RXNE, ENABLE );
 
@@ -364,6 +365,7 @@ int main ( void )
 
 	EXTI->IMR       = 0x0F;
 	 */
+
 	USART1->CR1|= ( 1<<4 );
 
 	//my_printf ( "USART_CR1 : %d\n",USART1->CR1 );
@@ -399,11 +401,11 @@ int main ( void )
 
 			actualiser_coords();
 
-		{
+	/*	{
 			my_printf ( "X%d#", ( long ) ( x*1000 ) );
 			my_printf ( "Y%d#", ( long ) ( y*1000 ) );
 			my_printf ( "A%d#\n", ( long ) ( angle*1000 ) );
-		}
+		}*/
 			if ( couper )
 			{
 				c_trans=0.0;
@@ -618,6 +620,7 @@ void filtres_codeurs()
 void traiter_char()
 {
 	char c = (USART_ReceiveData(USART1) & 0x7F);
+	//my_printf("je traite %d\n",(int)c);
 	record[rcur++]=c;
 	record[rcur]='\0';
 	if(buf_cur<BUF_LEN)
@@ -645,7 +648,7 @@ void traiter_message ( char* msg )
 	char c=msg[0];
 
 	if ( c=='?' )	//"Qui es-tu?", cette requete permet a l'hote d'identifier la carte. Reponse "?a" : "je suis la carte d'asservissement"
-		my_printf ( "?a#" );
+		my_printf ( "?o#" );
 	else if ( c=='X' )	//Nouvelle consigne de position X (en cm)
 	{
 		bufx= ( double ) lire_long ( & ( msg[1] ) ) /100.0;
@@ -671,9 +674,18 @@ void traiter_message ( char* msg )
 			GPIO_WriteBit( GPIOB, GPIO_Pin_8, Bit_RESET);
 		else
 			GPIO_WriteBit( GPIOB, GPIO_Pin_8, Bit_SET);
-		my_printf ( "X%d#", ( long ) ( x ) );
-		my_printf ( "Y%d#", ( long ) ( y ) );
+		my_printf ( "X%d#", ( long ) ( x * 1000) );
+		my_printf ( "Y%d#", ( long ) ( y * 1000) );
 		my_printf ( "A%d#", ( long ) ( angle*1000 ) );
+	}else if ( c=='r')	//Requete des coordonnees actuelles.
+	{
+		recu+=1;
+		/*if(recu)
+			GPIO_WriteBit( GPIOB, GPIO_Pin_8, Bit_RESET);
+		else
+			GPIO_WriteBit( GPIOB, GPIO_Pin_8, Bit_SET);
+		*/my_printf ( "G%lf#", ( filtred_1 ) );
+		my_printf ( "D%lf#", ( filtred_2 ) );
 	}
 	else if ( c=='C' ) //couper les moteurs
 	{

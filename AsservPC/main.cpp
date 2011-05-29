@@ -105,7 +105,11 @@ int main()
 {
 	// INITIALISATION
 	init();
-	odo_init();
+	if(!odo_init())
+	{
+		printf("Echec init odo\n");
+		return EXIT_FAILURE;
+	}	
 	buffer=create_bitmap(screen->w,screen->h);
 	
 	ttw.x=2.0;
