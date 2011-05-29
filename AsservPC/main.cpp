@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <math.h>
 
-#include "gestion_carte_odo.c"
+#include "gestion_carte_odo.cpp"
 
 #define COURBE 0
 #define DROIT 1

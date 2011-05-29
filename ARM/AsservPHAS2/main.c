@@ -684,8 +684,8 @@ void traiter_message ( char* msg )
 			GPIO_WriteBit( GPIOB, GPIO_Pin_8, Bit_RESET);
 		else
 			GPIO_WriteBit( GPIOB, GPIO_Pin_8, Bit_SET);
-		*/my_printf ( "G%lf#", ( filtred_1 ) );
-		my_printf ( "D%lf#", ( filtred_2 ) );
+		*/my_printf ( "G%lf#", ( codeur_filtred1 ) );
+		my_printf ( "D%lf#", ( codeur_filtred2 ) );
 	}
 	else if ( c=='C' ) //couper les moteurs
 	{
