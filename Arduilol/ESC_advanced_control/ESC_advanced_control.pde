@@ -60,7 +60,7 @@ void setup()
   DDRB|=B00000110;
   
   //activate serial
-  Serial.begin(9600);
+  Serial.begin(57600);
 }
 
 void setPulse(int timeA, int timeB)
@@ -294,6 +294,10 @@ void traiter()
       }
       else if(buf[0]=='G'||buf[0]=='D')
         traiter;
+    }
+    if(buf[0]=='?')
+    {
+      Serial.println("?e#");
     }
 }
 
